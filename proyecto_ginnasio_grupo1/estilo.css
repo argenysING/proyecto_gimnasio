@@ -1,0 +1,179 @@
+/* ==========================================================
+   Titan Fitness - estilo.css
+   Moderno clásico: azul noche, bronce y piedra.
+   Tipografías: Cinzel (títulos, inspirada en inscripciones
+   romanas) + Barlow (texto y menú).
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Barlow:wght@400;500;600&display=swap');
+
+:root {
+    --noche: #0E1A2B;
+    --acero: #24364D;
+    --bronce: #B8864B;
+    --bronce-claro: #D4A96A;
+    --piedra: #E9ECEF;
+    --tinta: #1A2433;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--piedra);
+    color: var(--tinta);
+    font-family: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ---------- Encabezado ---------- */
+
+header {
+    background: var(--noche);
+    border-bottom: 4px solid var(--bronce);
+    padding: 3.5rem 1.5rem 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 5.5rem);
+    letter-spacing: 0.12em;
+    line-height: 1.05;
+    text-transform: uppercase;
+    color: var(--piedra);
+}
+
+header p {
+    margin: 1rem 0 2.5rem;
+    color: var(--bronce-claro);
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+}
+
+/* ---------- Menú ---------- */
+
+nav {
+    border-top: 1px solid rgba(184, 134, 75, 0.45);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 clamp(1.25rem, 5vw, 3.5rem);
+}
+
+nav a {
+    display: block;
+    padding: 1.1rem 0.25rem;
+    border-bottom: 3px solid transparent;
+    color: var(--piedra);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--bronce-claro);
+    border-bottom-color: var(--bronce);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--bronce-claro);
+    outline-offset: 4px;
+}
+
+/* ---------- Contenido principal ---------- */
+
+section {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+    text-align: center;
+}
+
+h2 {
+    max-width: 26ch;
+    margin: 0 auto 2.75rem;
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 4vw, 2.3rem);
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    color: var(--noche);
+}
+
+/* Imagen enmarcada con un bloque de bronce desplazado */
+img {
+    display: block;
+    width: calc(100% - 14px);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 auto 0 0;
+    background: var(--noche);
+    color: var(--piedra);
+    font-size: 0.9rem;
+    box-shadow: 14px 14px 0 var(--bronce);
+}
+
+/* ---------- Pie de página ---------- */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 3rem;
+    padding: 2.5rem 1.5rem;
+    background: var(--noche);
+    border-top: 4px solid var(--bronce);
+    color: var(--piedra);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 2.5rem;
+    }
+
+    section {
+        padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    img {
+        width: calc(100% - 8px);
+        box-shadow: 8px 8px 0 var(--bronce);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav a {
+        transition: none;
+    }
+}

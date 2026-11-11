@@ -1,10 +1,11 @@
 /* ==========================================================
    Titan Fitness - estilo.css
    Moderno clásico: azul noche, bronce y piedra.
-   Tipografías: Cinzel (títulos, inspirada en inscripciones
-   romanas) + Barlow (texto y menú).
+   Sirve para las 6 páginas: index, categorias, promociones,
+   productos, nosotros y contacto.
+   Tipografías: Cinzel (títulos) + Barlow (texto y menú).
    ========================================================== */
-
+   
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Barlow:wght@400;500;600&display=swap');
 
 :root {
@@ -14,6 +15,7 @@
     --bronce-claro: #D4A96A;
     --piedra: #E9ECEF;
     --tinta: #1A2433;
+    --blanco: #FFFFFF;
 }
 
 *,
@@ -32,6 +34,14 @@ body {
     font-family: 'Barlow', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.05rem;
     line-height: 1.6;
+}
+
+/* Las imágenes nunca se recortan por defecto (ideal para el logo) */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* ---------- Encabezado ---------- */
@@ -90,7 +100,8 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus-visible {
+nav a:focus-visible,
+nav a[aria-current="page"] {
     color: var(--bronce-claro);
     border-bottom-color: var(--bronce);
 }
@@ -105,7 +116,7 @@ a:focus-visible {
 section {
     flex: 1;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 1.5rem 5rem;
     text-align: center;
@@ -113,7 +124,7 @@ section {
 
 h2 {
     max-width: 26ch;
-    margin: 0 auto 2.75rem;
+    margin: 0 auto 1.25rem;
     font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
     font-weight: 500;
     font-size: clamp(1.5rem, 4vw, 2.3rem);
@@ -122,16 +133,298 @@ h2 {
     color: var(--noche);
 }
 
-/* Imagen enmarcada con un bloque de bronce desplazado */
-img {
-    display: block;
+/* Texto de introducción bajo el título */
+section > p {
+    max-width: 60ch;
+    margin: 0 auto 3rem;
+    color: var(--acero);
+}
+
+/* Imagen principal (index): enmarcada con bloque de bronce */
+section > img {
     width: calc(100% - 14px);
+    max-width: 986px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    margin: 0 auto 0 0;
+    margin: 2rem auto 0;
     background: var(--noche);
     color: var(--piedra);
     font-size: 0.9rem;
+    box-shadow: 14px 14px 0 var(--bronce);
+}
+
+/* ---------- Categorías (tarjetas) ---------- */
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+section li,
+section article {
+    display: flex;
+    flex-direction: column;
+    background: var(--blanco);
+    border-top: 4px solid var(--bronce);
+    box-shadow: 0 2px 8px rgba(14, 26, 43, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section li:hover,
+section article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(14, 26, 43, 0.18);
+}
+
+section li img,
+section article img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--noche);
+    color: var(--piedra);
+    font-size: 0.9rem;
+}
+
+section h3 {
+    margin: 1.4rem 1.5rem 0.6rem;
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    color: var(--noche);
+}
+
+section li p,
+section article p {
+    margin: 0 1.5rem 1.75rem;
+    font-size: 0.98rem;
+    color: var(--acero);
+}
+
+/* ---------- Productos y promociones ---------- */
+
+/* Subtítulos sueltos dentro de la sección (fuera de una tarjeta) */
+section > h3 {
+    margin: 4.5rem 0 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* Precios y etiquetas de oferta (si usas estas clases) */
+.precio {
+    margin: 0 1.5rem 1.25rem;
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--bronce);
+}
+
+.precio-anterior {
+    color: var(--acero);
+    font-size: 1rem;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.oferta,
+.etiqueta {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 1rem 1.5rem 0;
+    padding: 0.2rem 0.75rem;
+    background: var(--bronce);
+    color: var(--noche);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+/* Botones y enlaces de acción */
+button,
+.boton,
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.8rem 1.75rem;
+    border: 2px solid var(--bronce);
+    background: var(--noche);
+    color: var(--piedra);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+.boton:hover,
+input[type="submit"]:hover,
+button:focus-visible,
+.boton:focus-visible {
+    background: var(--bronce);
+    color: var(--noche);
+}
+
+section li .boton,
+section li button,
+section article .boton,
+section article button {
+    margin: auto 1.5rem 1.75rem;
+    align-self: flex-start;
+}
+
+/* Enlaces dentro del contenido */
+section p a {
+    color: var(--bronce);
+    font-weight: 600;
+}
+
+/* Tablas (listas de precios, planes, horarios) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(14, 26, 43, 0.08);
+}
+
+th {
+    padding: 1rem 1.25rem;
+    background: var(--noche);
+    border-bottom: 3px solid var(--bronce);
+    color: var(--piedra);
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+td {
+    padding: 0.9rem 1.25rem;
+    border-bottom: 1px solid rgba(36, 54, 77, 0.15);
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(233, 236, 239, 0.6);
+}
+
+/* Tablas anchas: se deslizan en el celular en vez de romper la página */
+section:has(table) {
+    overflow-x: auto;
+}
+
+/* Formularios */
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--acero);
+    background: var(--blanco);
+    color: var(--tinta);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--bronce);
+    outline-offset: 2px;
+}
+
+/* ---------- Nosotros y contacto ---------- */
+
+/* Equipo: fotos verticales, enfocadas en la cara */
+section ul.equipo {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+section ul.equipo li img {
+    aspect-ratio: 3 / 4;
+    object-position: center top;
+}
+
+/* Contacto: formulario + tarjeta de información */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 2rem;
+    align-items: start;
+    text-align: left;
+}
+
+form,
+.info-contacto {
+    background: var(--blanco);
+    border-top: 4px solid var(--bronce);
+    box-shadow: 0 2px 8px rgba(14, 26, 43, 0.08);
+}
+
+form {
+    display: grid;
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-contacto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--noche);
+    color: var(--piedra);
+    font-size: 0.9rem;
+}
+
+.info-contacto h3 {
+    margin: 1.4rem 1.5rem 0.75rem;
+    font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: var(--noche);
+}
+
+.info-contacto p {
+    margin: 0 1.5rem 0.9rem;
+    color: var(--acero);
+}
+
+.info-contacto p:last-child {
+    margin-bottom: 1.75rem;
+}
+
+/* Mapa de ubicación, con el mismo marco de bronce de la portada */
+iframe {
+    display: block;
+    width: calc(100% - 14px);
+    max-width: 986px;
+    height: 380px;
+    margin: 0 auto;
+    border: 0;
+    background: var(--noche);
     box-shadow: 14px 14px 0 var(--bronce);
 }
 
@@ -166,14 +459,25 @@ footer p {
         padding: 2.5rem 1.25rem 3.5rem;
     }
 
-    img {
+    section > img,
+    iframe {
         width: calc(100% - 8px);
         box-shadow: 8px 8px 0 var(--bronce);
+    }
+
+    iframe {
+        height: 300px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    nav a {
+    nav a,
+    section li {
         transition: none;
+    }
+
+    section li:hover,
+section article:hover {
+        transform: none;
     }
 }

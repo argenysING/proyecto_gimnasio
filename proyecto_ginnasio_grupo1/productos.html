@@ -3,125 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos | Titan Fitness</title>
+    <title>Titan Fitness - Productos</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
         <h1>Titan Fitness</h1>
-        <img src="imagenes/imagen.png" alt="Logo de Titan Fitness" width="700" height="800">
         <p>Forjando disciplina, construyendo fuerza</p>
 
         <nav>
             <ul>
-                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
-                <li><a href="productos.html">Productos</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="productos.html" aria-current="page">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Nuestros productos</h2>
-        <div class="carrito-contador">🛒 Carrito: <span id="contador">0</span></div>
+        <h2>Nuestros Productos</h2>
+        <p>Todo lo que necesitas para sacarle el máximo provecho a tu entrenamiento:</p>
 
-        <div class="rejilla-productos">
+        <ul>
+            <li>
+                <img src="imagenes/mancuernas.jpg" alt="Set de mancuernas ajustables" width="320">
+                <span class="etiqueta">Pesas</span>
+                <h3>Mancuernas ajustables</h3>
+                <p>Set de 2 a 24 kg por mancuerna. Reemplaza más de diez pares de pesas.</p>
+                <p class="precio">RD$ 14,500</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
 
-            <article class="producto">
-                <img src="imagenes/mancuernas.jpg" alt="Set de mancuernas ajustables">
-                <div class="producto-info">
-                    <span class="categoria">Pesas</span>
-                    <h3>Mancuernas ajustables</h3>
-                    <p>Set de 2 a 24 kg por mancuerna. Reemplaza más de diez pares de pesas.</p>
-                    <span class="precio">RD$ 14,500</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
+            <li>
+                <img src="imagenes/bandas-elasticas.jpg" alt="Set de bandas elásticas de resistencia" width="320">
+                <span class="etiqueta">Accesorios</span>
+                <h3>Bandas elásticas</h3>
+                <p>Cinco niveles de resistencia para calentar, rehabilitar o entrenar en casa.</p>
+                <p class="precio">RD$ 1,200</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
 
-            <article class="producto">
-                <img src="imagenes/bandas-elasticas.jpg" alt="Set de bandas elásticas de resistencia">
-                <div class="producto-info">
-                    <span class="categoria">Accesorios</span>
-                    <h3>Bandas elásticas</h3>
-                    <p>Cinco niveles de resistencia para calentar, rehabilitar o entrenar en casa.</p>
-                    <span class="precio">RD$ 1,200</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
+            <li>
+                <img src="imagenes/proteina.jpg" alt="Bote de proteína de suero" width="320">
+                <span class="etiqueta">Suplementos</span>
+                <h3>Proteína de suero 2 lb</h3>
+                <p>24 g de proteína por porción. Sabores chocolate y vainilla.</p>
+                <p class="precio">RD$ 2,350</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
 
-            <article class="producto">
-                <img src="imagenes/proteina.jpg" alt="Bote de proteína de suero">
-                <div class="producto-info">
-                    <span class="categoria">Suplementos</span>
-                    <h3>Proteína de suero 2 lb</h3>
-                    <p>24 g de proteína por porción. Sabores chocolate y vainilla.</p>
-                    <span class="precio">RD$ 2,350</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
+            <li>
+                <img src="imagenes/guantes.jpg" alt="Guantes de entrenamiento" width="320">
+                <span class="etiqueta">Ropa deportiva</span>
+                <h3>Guantes de entrenamiento</h3>
+                <p>Palma acolchada y cierre en la muñeca para proteger tus manos en cada serie.</p>
+                <p class="precio">RD$ 950</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
 
-            <article class="producto">
-                <img src="imagenes/guantes.jpg" alt="Guantes de entrenamiento">
-                <div class="producto-info">
-                    <span class="categoria">Ropa deportiva</span>
-                    <h3>Guantes de entrenamiento</h3>
-                    <p>Palma acolchada y cierre en la muñeca para proteger tus manos en cada serie.</p>
-                    <span class="precio">RD$ 950</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
+            <li>
+                <img src="imagenes/creatina.jpg" alt="Bote de creatina monohidratada" width="320">
+                <span class="etiqueta">Suplementos</span>
+                <h3>Creatina monohidratada</h3>
+                <p>300 g de creatina pura para mejorar tu fuerza y tu rendimiento en cada entrenamiento.</p>
+                <p class="precio">RD$ 1,900</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
 
-            <article class="producto">
-                <img src="imagenes/creatina.jpg" alt="Bote de creatina monohidratada">
-                <div class="producto-info">
-                    <span class="categoria">Suplementos</span>
-                    <h3>Creatina monohidratada</h3>
-                    <p>300 g de creatina pura para mejorar tu fuerza y tu rendimiento en cada entrenamiento.</p>
-                    <span class="precio">RD$ 1,900</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
-
-            <article class="producto">
-                <img src="imagenes/poloche.jpg" alt="Poloche deportivo de manga larga">
-                <div class="producto-info">
-                    <span class="categoria">Ropa deportiva</span>
-                    <h3>Poloche deportivo manga larga</h3>
-                    <p>Tela ligera que absorbe el sudor, cómoda para entrenar y para el día a día.</p>
-                    <span class="precio">RD$ 1,450</span>
-                    <a class="btn-comprar" href="#">Agregar al carrito</a>
-                </div>
-            </article>
-
-        </div>
+            <li>
+                <img src="imagenes/poloche.jpg" alt="Poloche deportivo de manga larga" width="320">
+                <span class="etiqueta">Ropa deportiva</span>
+                <h3>Poloche deportivo manga larga</h3>
+                <p>Tela ligera que absorbe el sudor, cómoda para entrenar y para el día a día.</p>
+                <p class="precio">RD$ 1,450</p>
+                <a class="boton" href="contacto.html">Consultar</a>
+            </li>
+        </ul>
     </section>
-
-    <div class="aviso" id="aviso" role="status" aria-live="polite" hidden></div>
-    <script>
-        const botones = document.querySelectorAll('.btn-comprar');
-        const contador = document.getElementById('contador');
-        const aviso = document.getElementById('aviso');
-        let total = 0;
-        let temporizador;
-
-        botones.forEach(function (boton) {
-            boton.addEventListener('click', function (e) {
-                e.preventDefault();
-                total++;
-                contador.textContent = total;
-
-                const nombre = boton.closest('.producto').querySelector('h3').textContent;
-                aviso.textContent = nombre + ' agregado al carrito';
-                aviso.hidden = false;
-
-                clearTimeout(temporizador);
-                temporizador = setTimeout(function () {
-                    aviso.hidden = true;
-                }, 2000);
-            });
-        });
-    </script>
 
     <footer>
         <p>📍 Dirección: Av. Máximo Gómez, Distrito Nacional, República Dominicana</p>

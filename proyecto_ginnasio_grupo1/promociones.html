@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titán Fitness - Promociones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background: #f2f4f7; color: #1a1a1a; padding: 35px 15px; }
+        .container { max-width: 1150px; margin: auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1, h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; }
+        h1 { font-size: 2.2rem; letter-spacing: 2px; margin-bottom: 8px; }
+        h2 { font-size: 1.3rem; margin: 30px 0 18px; padding-bottom: 6px; border-bottom: 2px solid #e1e4e8; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+        .card { background: #fff; border-top: 4px solid #b8862d; box-shadow: 0 5px 15px rgba(0,0,0,.06); position: relative; display: flex; flex-direction: column; }
+        .badge { position: absolute; top: 10px; right: 10px; background: #d93829; color: #fff; font: 700 0.75rem 'Montserrat'; padding: 4px 9px; z-index: 2; }
+        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #f0f0f0; }
+        .card img.contain-img { object-fit: contain; padding: 12px; background: #fff; }
+        .body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .tag { background: #b8862d; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; align-self: flex-start; margin-bottom: 10px; }
+        .body p { color: #5a626a; font-size: 0.88rem; margin: 8px 0 15px; flex-grow: 1; }
+        .price { border-top: 1px solid #eee; padding-top: 10px; margin-bottom: 14px; }
+        .price s { color: #99a1a8; margin-right: 8px; }
+        .price strong { font-size: 1.4rem; }
+        .btn { display: block; text-align: center; background: #1a1a1a; color: #fff; text-decoration: none; padding: 10px; font-weight: 600; font-size: 0.85rem; }
+        .btn:hover { background: #b8862d; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>PROMOCIONES Y COMBOS</h1>
+        <p>Ofertas exclusivas por tiempo limitado en entrenamiento y suplementación:</p>
+    </header>
+
+    <h2>COMBOS DE ENTRENAMIENTO</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="badge">-30% OFF</span>
+            <img class="contain-img" src="http://store.wellness-pro.com/cdn/shop/products/estante-para-mancuernas-ajustables-rack-for-adjustable-dumbbells-9469241.jpg?v=1766607374" alt="Pack Home Gym Pro">
+            <div class="body">
+                <span class="tag">Combo Fuerza</span>
+                <h3>PACK HOME GYM PRO</h3>
+                <p>Mancuernas ajustables (2 a 24 kg) + set de 5 bandas elásticas de resistencia.</p>
+                <div class="price"><s>$11,500</s><strong>$8,490</strong></div>
+                <a href="#reservar" class="btn">APROVECHAR OFERTA</a>
+            </div>
+        </div>
+        <div class="card">
+            <span class="badge">2X1 LIMITADO</span>
+            <img src="https://media.istockphoto.com/id/2075354173/photo/fitness-couple-is-doing-kettlebell-twist-in-a-gym-togehter.jpg?s=612x612&w=0&k=20&c=lfs1V1d0YB33tn72myi6FElJnylPJYYM9lW5ZhlnYqY=" alt="Combo Dúo Titán">
+            <div class="body">
+                <span class="tag">Membresía</span>
+                <h3>COMBO DÚO TITÁN (3 MESES)</h3>
+                <p>Acceso ilimitado para 2 personas a zona de pesas, clases y evaluación física.</p>
+                <div class="price"><s>$13,000</s><strong>$9,500</strong></div>
+                <a href="#reservar" class="btn">APROVECHAR OFERTA</a>
+            </div>
+        </div>
+        <div class="card">
+            <span class="badge">-25% OFF</span>
+            <img class="contain-img" src="https://i5.walmartimages.com/seo/Athletic-Works-Home-Gym-Kit-Includes-Resistance-Tube-Ab-Wheel-Jump-Rope-and-Push-Up-Bars_ed334329-ced3-4007-a1d1-9e8633beb94c.dd7b0975bfd656219a464c6f91664d5f.jpeg" alt="Kit Funcional & Core">
+            <div class="body">
+                <span class="tag">Accesorios</span>
+                <h3>KIT FUNCIONAL & CORE</h3>
+                <p>Bandas de alta tensión + rueda abdominal + cuerda de velocidad profesional.</p>
+                <div class="price"><s>$5,400</s><strong>$4,200</strong></div>
+                <a href="#reservar" class="btn">APROVECHAR OFERTA</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>COMBOS DE PROTEÍNA</h2>
+    <div class="grid">
+        <div class="card">
+            <span class="badge">MÁS VENDIDO</span>
+            <img class="contain-img" src="https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_COFFEE_Main_Image.png?v=1777475237&width=800" alt="Gold Standard 100% Whey">
+            <div class="body">
+                <span class="tag">Suplementos</span>
+                <h3>COMBO GOLD STANDARD 100% WHEY</h3>
+                <p>Proteína Gold Standard 100% Whey (24g por porción) + Creatina 300g + Shaker gratis.</p>
+                <div class="price"><s>$6,200</s><strong>$4,850</strong></div>
+                <a href="#reservar" class="btn">PEDIR COMBO</a>
+            </div>
+        </div>
+        <div class="card">
+            <span class="badge">AHORRA $1,700</span>
+            <img class="contain-img" src="https://www.optimumnutrition.com/cdn/shop/files/US_GSW_5LB_COFFEE_Main_Image.png?v=1777475237&width=800" alt="Dúo Gold Standard Whey">
+            <div class="body">
+                <span class="tag">Pack Ahorro</span>
+                <h3>DÚO GOLD STANDARD WHEY</h3>
+                <p>Llévate 2 envases de Gold Standard 100% Whey. Combina sabores chocolate y vainilla.</p>
+                <div class="price"><s>$7,500</s><strong>$5,800</strong></div>
+                <a href="#reservar" class="btn">PEDIR COMBO</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
